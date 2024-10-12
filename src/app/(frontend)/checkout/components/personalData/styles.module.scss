@@ -1,0 +1,118 @@
+@import "src/styles/media.scss";
+
+.container {
+	width: 100%;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	color: var(--primary-color);
+	align-items: center;
+
+	.text {
+		font-size: 40px;
+		font-weight: 300;
+		line-height: 46px;
+	}
+
+	.button {
+		background-color: #FFB63B;
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+		padding: 12px 107px;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 38px;
+	}
+}
+
+.content {
+
+	.inputWrapper {
+		.button {
+			text-align: center;
+		}
+	}
+
+	.inputContainer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.input {
+			width: 100%;
+			max-width: calc(50% - 10px);
+			margin-bottom: 30px;
+
+			@media only screen and (max-width: $media-xl) {
+				max-width: unset;
+			}
+		}
+
+		.input:nth-child(1),
+		.input:nth-child(3) {
+			margin-right: 20px;
+		}
+
+		@media only screen and (max-width: $media-xl) {
+			flex-direction: column;
+
+			.input:nth-child(1),
+			.input:nth-child(3) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.button {
+		width: 100%;
+	}
+}
+
+
+.phoneInputWrapper {
+	position: relative;
+	width: 100%;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	max-width: 270px;
+
+	@media only screen and (max-width: $media-xxl) {
+		max-width: none;
+	}
+
+	input {
+		&::placeholder {
+			opacity: 0.5;
+
+		}
+	}
+}
+
+.phoneInputText {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 27px;
+	margin-bottom: 15px;
+
+	@media only screen and (max-width: $media-lg) {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 7px;
+	}
+}
+
+
+.error {
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 16px;
+	line-height: 1;
+	color: var(--error-color);
+	z-index: 50;
+}

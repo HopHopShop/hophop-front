@@ -1,0 +1,135 @@
+@import "src/styles/media.scss";
+
+.section {
+	padding: 120px 0 60px 0;
+
+	@media only screen and (max-width: $media-xl) {
+		padding: 60px 0;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		padding: 120px 0 60px 0;
+	}
+}
+
+.wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.imageWrapper {
+	margin-bottom: 40px;
+
+	@media only screen and (max-width: $media-sm) {
+		width: 100%;
+		max-width: 235px;
+		margin-bottom: 20px;
+	}
+}
+
+.subTitle {
+	margin-bottom: 40px;
+
+	@media only screen and (max-width: $media-sm) {
+		margin-bottom: 20px;
+	}
+}
+
+.buttonBack {
+	position: absolute;
+	top: -40px;
+	left: 40px;
+	z-index: 100;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--primary-color);
+	border-radius: 32px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	transition: var(--transition);
+
+	@media only screen and (max-width: $media-sm) {
+		top: -80px;
+		left: 20px;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: var(--mintgreen-color);
+
+		svg {
+			path {
+				stroke: var(--white-color);
+			}
+		}
+	}
+
+	svg {
+		path {
+			transition: var(--transition);
+		}
+	}
+}
+
+.notReadyImageWrapper {
+	margin-bottom: 40px;
+
+	@media only screen and (max-width: $media-sm) {
+		width: 100%;
+		max-width: 126px;
+		margin-bottom: 20px;
+	}
+}
+
+.description {
+	margin-bottom: 40px;
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 1.1;
+
+	@media only screen and (max-width: $media-sm) {
+		margin-bottom: 28px;
+	}
+}
+
+.errorMessage {
+	font-size: 18px;
+	color: var(--error-color);
+
+	@media only screen and (max-width: $media-sm) {
+		width: 100%;
+		max-width: 250px;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.successMessage {
+	font-size: 18px;
+	color: var(--success-color);
+
+	@media only screen and (max-width: $media-sm) {
+		width: 100%;
+		max-width: 250px;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

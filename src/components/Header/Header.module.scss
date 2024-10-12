@@ -1,0 +1,64 @@
+@import "src/styles/media.scss";
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 2000;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 70px;
+	border-left: 2px solid var(--primary-color);
+	border-right: 2px solid var(--primary-color);
+	border-bottom: 2px solid var(--primary-color);
+	display: flex;
+	align-items: center;
+	padding-right: 32px;
+	background-color: var(--secondary-background-color);
+
+	@media only screen and (max-width: $media-lg) {
+		padding: 14px;
+		justify-content: space-between;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		border-top: 2px solid var(--primary-color);
+	}
+}
+
+.icons_item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+
+.navigation {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__links {
+		width: 100%;
+		height: 100%;
+	}
+
+	@media only screen and (max-width: $media-lg) {
+		width: calc((100% - 235px) / 2);
+		justify-content: flex-end;
+
+		&__links {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		width: calc((100% - 100px) / 2);
+	}
+}

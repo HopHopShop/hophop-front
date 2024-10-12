@@ -1,0 +1,361 @@
+@import "src/styles/media";
+
+.wrapper {
+	padding: 30px 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	position: relative;
+	height: 100%;
+	@media screen and (max-width: $media-lg) {
+		padding: 20px 30px;
+		gap: 20px;
+	}
+
+	h1 {
+		font-size: 64px;
+		font-weight: 400;
+		line-height: 70px;
+		color: var(--primary-color);
+	}
+}
+
+
+.orderInfo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: start;
+
+		gap: 15px;
+	}
+
+	.order {
+		font-size: 40px;
+		font-weight: 300;
+		line-height: 46px;
+		color: var(--primary-color);
+
+		span {
+			font-size: 36px;
+			font-weight: 300;
+			line-height: 46px;
+			color: var(--primary-color);
+		}
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 22px;
+			line-height: 26px;
+			span {
+				font-size: 26px;
+				line-height: 36px;
+			}
+		}
+	}
+}
+
+.userInfo {
+	display: flex;
+	justify-content: space-between;
+	color: var(--primary-color);
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 15px;
+	}
+
+
+	&_container {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		h4 {
+			font-size: 36px;
+			font-weight: 300;
+			line-height: 46px;
+			margin-bottom: 15px;
+
+			@media screen and (max-width: $media-lg) {
+				font-size: 26px;
+				line-height: 26px;
+				margin-bottom: 10px;
+			}
+		}
+
+		span {
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 36px;
+			@media screen and (max-width: $media-lg) {
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+}
+
+
+.table {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	@media screen and (max-width: $media-lg) {
+		gap: 20px;
+	}
+}
+
+.container {
+	width: 100%;
+	background-color: var(--beige-color);
+	border-radius: 32px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	height: auto;
+	@media screen and (max-width: $media-lg) {
+		border-radius: 16px;
+	}
+	@media screen and (max-width: $media-md) {
+		width: 100%;
+		max-width: 778px;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			height: 10px;
+		}
+	}
+}
+
+
+.responsiveTable {
+	padding: 0;
+	margin: 0;
+	@media screen and (max-width: $media-md) {
+		width: 800px;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--primary-color);
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+		word-break: break-word;
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 16px;
+			line-height: 18px;
+
+		}
+		@media screen and (max-width: $media-md) {
+			font-size: 12px;
+		}
+	}
+
+	.tableHeader {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+
+		//&:first-child {
+		//	border-bottom: 2px solid var(--primary-color);
+		//}
+
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 18px;
+			line-height: 28px;
+
+		}
+		@media screen and (max-width: $media-md) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		div {
+			padding: 18px 0;
+
+			@media screen and (max-width: $media-lg) {
+				padding: 12px 0;
+
+			}
+
+			&:first-child {
+				padding-left: 25px;
+				@media screen and (max-width: $media-lg) {
+					padding-left: 12px
+
+				}
+			}
+
+		}
+	}
+
+	.tableRow {
+		border-top: 2px solid var(--primary-color);
+		padding: 16px 0;
+
+		&:last-child {
+			border-bottom: 2px solid var(--primary-color);
+		}
+
+		@media screen and (max-width: $media-lg) {
+			padding: 12px 0;
+		}
+	}
+
+	.col1 {
+		flex-basis: 20%;
+		padding-left: 25px;
+		text-align: start;
+		@media screen and (max-width: $media-lg) {
+			padding-left: 12px;
+
+		}
+	}
+
+	.col2, .col3, .col4, .col5 {
+		text-align: center;
+	}
+
+	.col2 {
+		flex-basis: 40%;
+		text-align: start;
+	}
+
+	.col3 {
+		flex-basis: 15%;;
+	}
+
+	.col4 {
+		flex-basis: 15%;
+	}
+
+	.col5 {
+		flex-basis: 20%;
+	}
+
+}
+
+.orderTotal {
+	display: flex;
+	justify-content: end;
+	padding: 20px 40px;
+	color: var(--primary-color);
+	@media screen and (max-width: $media-md) {
+		padding: 20px;
+	}
+
+	&_wrapper {
+		gap: 10px;
+		display: flex;
+		flex-direction: column;
+		max-width: 200px;
+		width: 100%;
+	}
+
+	&_item {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: $media-md) {
+			font-size: 14px;
+			line-height: 16px;
+
+		}
+	}
+}
+
+.last {
+	font-weight: 700;
+}
+
+
+.searchContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 200;
+}
+
+.searchInput {
+	position: relative;
+	width: 312px;
+	padding: 14px;
+	border-radius: 32px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--lightgreen-color);
+	letter-spacing: -0.02em;
+	z-index: 300;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 46px;
+	@media screen and (max-width: $media-lg) {
+		width: 200px;
+		padding: 10px;
+		font-size: 22px;
+		line-height: 36px;
+	}
+}
+
+.suggestionsWrapper {
+	position: absolute;
+	top: 60%;
+	left: 0;
+	right: 0;
+	border: 2px solid var(--primary-color);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--lightgreen-color);
+	border-top: none;
+	z-index: 200;
+	padding-top: 25px;
+}
+
+.suggestionsWrapperScrollBar {
+	overflow: hidden;
+	position: relative;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.suggestionsContainer {
+	overflow-y: auto;
+	box-sizing: content-box;
+	max-height: 400px;
+}
+
+.suggestionItem {
+	padding: 8px;
+	cursor: pointer;
+	transition: all .4s ease;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 46px;
+	@media screen and (max-width: $media-lg) {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	&:hover {
+		color: #507178;
+	}
+}
+
+
+.rotate {
+	transform: rotate(180deg);
+}

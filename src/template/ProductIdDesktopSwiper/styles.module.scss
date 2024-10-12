@@ -1,0 +1,126 @@
+@import "src/styles/mixins";
+
+
+.swiperWrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	width: 100%;
+
+	@media only screen and (max-width: $media-lg) {
+		display: none;
+	}
+
+	.swiperSlide {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.swiperSlide2 {
+		width: 100%;
+		height: 400px;
+
+		img {
+			margin: 0 auto;
+			width: 220px;
+			height: 500px;
+			border: 2px solid var(--primary-color);
+			box-shadow: 2px 2px 0 2px var(--primary-color);
+			border-radius: 24px;
+			cursor: pointer;
+
+			@media only screen and (max-width: $media-xxl) {
+				width: 180px;
+				height: 200px;
+			}
+
+			@media only screen and (max-width: $media-xl) {
+				width: 130px;
+			}
+		}
+	}
+
+	.mySwiper2 {
+		border: 4px solid var(--primary-color);
+		border-radius: 24px;
+		width: 600px;
+		margin: 0 20px;
+
+		@media only screen and (max-width: 1450px) {
+			width: 550px;
+		}
+
+		@media only screen and (max-width: $media-xxl) {
+			width: 500px;
+		}
+
+		@media only screen and (max-width: $media-xl) {
+			width: 450px;
+		}
+	}
+
+	.mySwiper {
+		background-color: var(--beige-color);
+		border-radius: 32px;
+		border: 4px solid var(--primary-color);
+		width: 294px;
+
+		@media only screen and (max-width: $media-xl) {
+			width: 180px;
+		}
+	}
+}
+
+
+.swiperContainer {
+	display: flex;
+	position: relative;
+}
+
+
+.button {
+	border: 2px solid var(--primary-color);
+	border-radius: 32px;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	transform: translate(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--secondary-background-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	transition: all .2s ease;
+
+	svg {
+		transition: var(--transition);
+		color: var(--primary-color);;
+	}
+
+	&:hover {
+		border: 2px solid #507178;
+		box-shadow: 2px 2px 0 2px #507178;
+
+		svg {
+			color: var(--gray-color);
+		}
+	}
+
+}
+
+.button_left {
+	left: 60px;
+}
+
+.button_right {
+	right: 20px;
+}
+
+.iconRotate {
+	transform: rotate(180deg);
+}

@@ -1,0 +1,44 @@
+@import "src/styles/mixins";
+
+.readyData {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.userInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	overflow-wrap: break-word;
+	flex-shrink: 1;
+	min-width: 0;
+
+	span {
+		display: block;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 36px;
+		@media only screen and (max-width: $media-lg) {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 24px;
+		}
+	}
+}
+
+
+.imgWrapper {
+	cursor: pointer;
+
+	.img {
+		width: 32px;
+		height: 32px;
+		@include icons-state;
+		@media only screen and (max-width: $media-lg) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

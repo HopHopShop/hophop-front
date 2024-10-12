@@ -1,0 +1,192 @@
+@import "src/styles/media";
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 638px;
+	@media screen and (max-width: $media-lg) {
+		gap: 35px;
+	}
+	@media screen and (max-width: $media-md) {
+		width: 100%;
+	}
+	@media screen and (max-width: 600px) {
+		gap: 15px;
+	}
+	@media screen and (max-width: 395px) {
+		gap: 25px;
+	}
+
+}
+
+.inputWrapper {
+	display: flex;
+	gap: 25px;
+	width: 638px;
+
+
+	@media screen and (max-width: $media-md) {
+		width: 90%;
+	}
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		gap: 15px;
+		width: 100%;
+	}
+	@media screen and (max-width: 395px) {
+		flex-direction: column;
+		gap: 25px;
+		width: 100%;
+	}
+}
+
+.buttonsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	text-align: center;
+	width: 638px;
+
+	@media screen and (max-width: $media-md) {
+		width: 70%;
+		gap: 15px;
+	}
+	@media screen and (max-width: 600px) {
+		width: 100%;
+
+	}
+
+	button, .buttonLink {
+		font-size: 34px;
+		font-weight: 400;
+		line-height: 38px;
+
+		@media screen and (max-width: $media-md) {
+			font-size: 20px;
+			line-height: 22px;
+		}
+	}
+
+	.checkbox span{
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32.04px;
+
+		@media screen and (max-width: $media-md) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	.link {
+		text-decoration: underline;
+		margin-left: 5px;
+		@media screen and (max-width: $media-md) {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 24px;
+		}
+	}
+
+
+	.google {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+		@media screen and (max-width: $media-md) {
+			gap: 12px;
+		}
+
+		span {
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 24px;
+			@media screen and (max-width: $media-md) {
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+
+		.googleImage {
+			width: 48px;
+			height: 48px;
+			cursor: pointer;
+			border: 2px solid #192C32;
+			background: #DFE7EB;
+			border-radius: 15px;
+			box-shadow: 2px 2px 0 2px var(--primary-color);
+		}
+	}
+}
+
+
+.phoneInputWrapper {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	input {
+		width: 100%;
+
+		&::placeholder {
+			opacity: 0.5;
+
+		}
+	}
+
+	@media screen and (max-width: $media-lg) {
+		margin-bottom: 16px;
+	}
+}
+
+.phoneInputText {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 27px;
+	margin-bottom: 15px;
+	@media only screen and (max-width: $media-lg) {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 7px;
+	}
+}
+
+
+.error {
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: calc(100% - 30px);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 16px;
+	line-height: 1;
+	color: var(--error-color);
+	z-index: 50;
+
+	@media screen and (max-width: $media-lg) {
+		top: calc(100% + 10px);
+	}
+}
+
+.errorText {
+	width: 100%;
+	display: block;
+	line-height: 1;
+	color: var(--error-color);
+
+	font-size: 26px;
+	font-weight: 300;
+
+	@media screen and (max-width: $media-lg) {
+        font-size: 20px;
+	}
+	@media screen and (max-width: $media-md) {
+		line-height: 24px;
+	}
+
+}

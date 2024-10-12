@@ -1,0 +1,72 @@
+@import "src/styles/media.scss";
+
+.bgWrapper {
+	background: rgba(25, 44, 50, 0.9);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full {
+	position: fixed;
+	z-index: 2200;
+}
+
+.colum {
+	flex-direction: column;
+}
+
+.container {
+	z-index: 500;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-color: var(--beige-color);
+	max-width: 450px;
+	width: 100%;
+	border-radius: 32px;
+
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	gap: 15px;
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+	}
+
+	span {
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 46px;
+		@media only screen and (max-width: 500px) {
+			font-size: 27px;
+			line-height: 36px;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		margin: 0 20px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+
+	.btn {
+		padding: 5px 25px;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 38px;
+		@media only screen and (max-width: 500px) {
+			width: 100%;
+		}
+	}
+}

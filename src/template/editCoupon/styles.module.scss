@@ -1,0 +1,51 @@
+@import "src/styles/media";
+
+.wrapper {
+	position: relative;
+	padding: 50px 60px;
+	height: 100%;
+
+	.loader {
+		height: 100vh;
+	}
+
+	@media only screen and (max-width: $media-lg) {
+		padding: 20px 30px;
+		.loader {
+			height: 100%;
+		}
+	}
+
+}
+
+.formWrapper {
+	max-width: 500px;
+	width: 100%;
+	display: flex;
+	gap: 32px;
+
+	@media only screen and (max-width: $media-lg) {
+		flex-direction: column;
+		gap: 32px;
+	}
+}
+
+.form {
+	width: 100%;
+
+	.couponWrapper {
+		display: flex;
+		width: 100%;
+		gap: 15px;
+
+		@media screen and (max-width: $media-lg) {
+			flex-direction: column;
+			margin-bottom: 25px;
+			gap: 25px;
+		}
+	}
+}
+
+.select {
+	width: 100%;
+}

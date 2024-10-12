@@ -1,0 +1,36 @@
+@import "src/styles/media.scss";
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 60px;
+	@media only screen and (max-width: $media-lg) {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@media only screen and (max-width: $media-sm) {
+		padding: 20px;
+	}
+}
+
+.first {
+	width: 610px;
+	@media only screen and (max-width: $media-xxl) {
+		margin-right: 40px;
+	}
+	@media only screen and (max-width: $media-lg) {
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+.second {
+	max-width: 500px;
+	width: 100%;
+	@media only screen and (max-width: $media-xxl) {
+		//min-width: 350px;
+	}
+	@media only screen and (max-width: $media-lg) {
+		display: none;
+	}
+}

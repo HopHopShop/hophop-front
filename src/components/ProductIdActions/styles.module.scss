@@ -1,0 +1,62 @@
+@import "src/styles/media.scss";
+@import "src/styles/mixins.scss";
+
+.actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media only screen and (max-width: $media-lg) {
+		justify-content: center;
+	}
+
+	.iconFavorite {
+		width: 68px;
+		height: 68px;
+
+		@media only screen and (max-width: $media-xxl) {
+			width: 48px;
+			height: 48px;
+		}
+
+		@media only screen and (max-width: $media-lg) {
+			display: none;
+		}
+
+		svg {
+			height: 34px;
+			width: 34px;
+
+			@media only screen and (max-width: $media-xxl) {
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+
+	.cartButton {
+		padding: 12px 18px;
+		background-color: #FFB63B;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 40px;
+		border-radius: 32px;
+		border: 2px solid var(--primary-color);
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+		color: var(--primary-color);
+		@include button-states-primary;
+
+		@media only screen and (max-width: $media-xxl) {
+			padding: 4px 12px;
+			font-size: 18px;
+		}
+
+		@media only screen and (max-width: $media-lg) {
+			font-size: 20px;
+			line-height: 22px;
+			padding: 12px 24px;
+		}
+	}
+
+}
+

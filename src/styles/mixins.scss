@@ -1,0 +1,101 @@
+@import "src/styles/media.scss";
+
+@mixin section-heading {
+	font-size: 64px;
+	line-height: 1.1;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@media (max-width: $media-lg) {
+		font-size: 45px;
+	}
+
+	@media (max-width: $media-sm) {
+		font-size: 36px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+}
+
+
+@mixin footer-links-states {
+	transition: var(--transition);
+
+	&:hover {
+		color: var(--gray-color);
+	}
+}
+
+@mixin header-links-states {
+	transition: var(--transition);
+
+	&:hover {
+		color: var(--white-color);
+		background-color: var(--gray-color);
+	}
+
+	&:disabled {
+		background-color: var(--beige-color);
+		color: var(--lightblue-color);
+	}
+}
+
+@mixin button-states-secondary {
+	transition: var(--transition);
+	background-color: var(--beige-color);
+
+	&:hover {
+		color: var(--gray-color);
+		background-color: var(--beige-color);
+	}
+
+	&:active {
+		color: var(--lightgreen-color);
+		background-color: var(--gray-color);
+	}
+
+	&:disabled {
+		color: var(--primary-color);
+		background-color: #7A8E98;
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}
+
+@mixin button-states-primary {
+	transition: var(--transition);
+	background-color: var(--yellow-color);
+	color: var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+
+	&:hover {
+		color: var(--gray-color);
+		border-color: var(--gray-color);
+		background-color: var(--yellow-color);
+		box-shadow: 2px 2px 0 2px var(--gray-color);
+	}
+
+	&:active {
+		color: var(--lightgreen-color);
+		border-color: var(--primary-color);
+		background-color: var(--gray-color);
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+	}
+
+	&:disabled {
+		color: var(--primary-color);
+		background-color: var(--gray-color);
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}
+
+
+@mixin icons-state {
+	transition: var(--transition);
+	color: var(--primary-color);;
+
+	&:hover {
+		color: var(--gray-color);
+	}
+}

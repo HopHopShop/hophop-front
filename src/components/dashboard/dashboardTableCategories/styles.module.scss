@@ -1,0 +1,172 @@
+@import "../../../styles/media";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	@media screen and (max-width: $media-lg) {
+		gap: 20px;
+	}
+}
+
+.container {
+	width: 100%;
+	background-color: var(--beige-color);
+	border-radius: 32px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+
+	@media screen and (max-width: $media-lg) {
+		border-radius: 16px;
+	}
+	@media screen and (max-width: $media-md) {
+		width: 100%;
+		max-width: 778px;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			height: 10px;
+		}
+	}
+
+}
+
+
+.responsiveTable {
+	padding: 0;
+	margin: 0;
+	//height: 680px;
+	//@media screen and (max-width: $media-lg) {
+	//	height: 505px;
+	//}
+	@media screen and (max-width: $media-md) {
+		width: 800px;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--primary-color);
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+		word-break: break-word;
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 16px;
+			line-height: 18px;
+
+		}
+		@media screen and (max-width: $media-md) {
+			font-size: 12px;
+		}
+	}
+
+	.tableHeader {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 18px;
+			line-height: 28px;
+
+		}
+		@media screen and (max-width: $media-md) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		div {
+			padding: 18px 0;
+
+			@media screen and (max-width: $media-lg) {
+				padding: 12px 0;
+
+			}
+
+			&:first-child {
+				padding-left: 25px;
+				@media screen and (max-width: $media-lg) {
+					padding-left: 12px
+
+				}
+			}
+
+			&:last-child {
+				padding-right: 25px;
+				@media screen and (max-width: $media-lg) {
+					padding-right: 12px
+
+				}
+			}
+		}
+	}
+
+	.tableRow {
+		border-top: 2px solid var(--primary-color);
+		padding: 16px 0;
+
+		@media screen and (max-width: $media-lg) {
+			padding: 12px 0;
+		}
+	}
+
+	.col1 {
+		flex-basis: 10%;
+		padding-left: 25px;
+		@media screen and (max-width: $media-lg) {
+			padding-left: 12px;
+
+		}
+	}
+
+	.col2, .col3, {
+	}
+
+	.col2 {
+		flex-basis: 20%;
+		text-align: start;
+	}
+
+	.col3 {
+		flex-basis: 50%;
+		text-align: center;
+	}
+
+
+	.col4 {
+		flex-basis: 20%;
+		padding-right: 25px;
+		display: flex;
+		justify-content: flex-end;
+		gap: 20px;
+		align-items: center;
+		@media screen and (max-width: $media-lg) {
+			padding-right: 12px;
+			gap: 10px;
+
+		}
+
+		@media screen and (max-width: $media-md) {
+			gap: 5px;
+		}
+
+		.iconWrapper {
+			cursor: pointer;
+
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+
+			@media screen and (max-width: $media-lg) {
+				svg {
+					height: 15px;
+					width: 15px;
+				}
+			}
+		}
+
+	}
+}

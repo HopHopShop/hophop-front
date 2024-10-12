@@ -1,0 +1,106 @@
+@import "src/styles/media";
+
+.form {
+	@media screen and (max-width: $media-lg) {
+		gap: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	@media screen and (max-width: $media-sm) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@media screen and (max-width: $media-xs) {
+		gap: 25px;
+	}
+}
+
+.buttonsWrap {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 32px;
+	text-align: center;
+
+	@media screen and (max-width: $media-sm) {
+		gap: 20px;
+		width: 200px;
+	}
+
+	button, .buttonLink {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 38px;
+
+		@media screen and (max-width: $media-sm) {
+			font-size: 20px;
+			line-height: 22px;
+		}
+	}
+
+	.google {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+		@media screen and (max-width: $media-sm) {
+			gap: 12px;
+		}
+
+		span {
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 24px;
+			@media screen and (max-width: $media-sm) {
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+
+		.googleImage {
+			width: 48px;
+			height: 48px;
+			cursor: pointer;
+			border: 2px solid #192C32;
+			background: #DFE7EB;
+			border-radius: 15px;
+			box-shadow: 2px 2px 0 2px var(--primary-color);
+		}
+	}
+}
+
+.forgot {
+	width: fit-content;
+	margin: 0 auto;
+	color: #507178;
+	text-decoration: underline;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 40px;
+	cursor: pointer;
+
+	@media screen and (max-width: $media-sm) {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+.error {
+	width: 100%;
+	display: block;
+	line-height: 1;
+	color: var(--error-color);
+	font-size: 24px;
+	font-weight: 300;
+
+	@media screen and (max-width: $media-md) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.errorMessage {
+	top: 75px;
+
+}

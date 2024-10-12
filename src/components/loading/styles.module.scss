@@ -1,0 +1,33 @@
+@import "../../styles/media";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 38px 0;
+}
+
+.text {
+	font-size: 64px;
+	font-weight: 400;
+	line-height: 70px;
+	color: var(--primary-color);
+	@media only screen and (max-width: $media-xl) {
+		font-size: 52px;
+		line-height: 60px;
+	}
+	@media only screen and (max-width: $media-lg) {
+		font-size: 42px;
+		line-height: 50px;
+	}
+	@media only screen and (max-width: $media-sm) {
+		font-size: 36px;
+		line-height: 38px;
+	}
+}
+
+.img {
+	width: 500px;
+	height: 500px;
+}

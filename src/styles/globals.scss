@@ -1,0 +1,95 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--beige-color);
+	color: var(--primary-color);
+}
+
+h1 {
+	font-size: 42px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+h4 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+h5 {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+img {
+	height: auto;
+	object-fit: cover;
+}
+
+ul,
+ol {
+	padding-left: 20px;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #adadad;
+	border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+.product-drag-drop {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.no-scroll {
+	overflow: hidden;
+}

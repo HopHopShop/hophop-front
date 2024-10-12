@@ -1,0 +1,36 @@
+.timer {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-bottom: 40px;
+	font-weight: 100;
+
+	@media only screen and (max-width: 575px) {
+		gap: 15px;
+	}
+}
+
+.digitswrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.digits {
+	font-size: 120px;
+
+	@media only screen and (max-width: 575px) {
+		font-size: 36px;
+	}
+}
+
+.letters {
+	font-size: 40px;
+
+	@media only screen and (max-width: 575px) {
+		font-size: 20px;
+	}
+}

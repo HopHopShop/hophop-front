@@ -1,0 +1,266 @@
+@import "../../../styles/mixins.scss";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	height: 100%;
+
+	@media screen and (max-width: $media-lg) {
+		gap: 20px;
+	}
+}
+
+.container {
+	width: 100%;
+	background-color: var(--beige-color);
+	border-radius: 32px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+
+	@media screen and (max-width: $media-lg) {
+		border-radius: 16px;
+	}
+
+	@media screen and (max-width: $media-md) {
+		width: 100%;
+		max-width: 778px;
+		overflow-x: auto;
+
+		&::-webkit-scrollbar {
+			height: 10px;
+		}
+	}
+
+}
+
+.orange {
+	background-color: #FFB63B;
+}
+
+.responsiveTable {
+	padding: 0;
+	margin: 0;
+
+	//height: 680px;
+	//@media screen and (max-width: $media-lg) {
+	//	height: 505px;
+	//}
+	@media screen and (max-width: $media-md) {
+		width: 800px;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--primary-color);
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+		word-break: break-word;
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 16px;
+			line-height: 18px;
+
+		}
+
+		@media screen and (max-width: $media-md) {
+			font-size: 12px;
+		}
+	}
+
+	.tableHeader {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+
+		@media screen and (max-width: $media-lg) {
+			font-size: 18px;
+			line-height: 28px;
+
+		}
+
+		@media screen and (max-width: $media-md) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		div {
+			padding: 18px 0;
+
+			@media screen and (max-width: $media-lg) {
+				padding: 12px 0;
+
+			}
+
+			&:first-child {
+				padding-left: 25px;
+
+				@media screen and (max-width: $media-lg) {
+					padding-left: 12px
+				}
+			}
+
+			&:last-child {
+				padding-right: 25px;
+
+				@media screen and (max-width: $media-lg) {
+					padding-right: 12px
+				}
+			}
+		}
+	}
+
+	.tableRow {
+		border-top: 2px solid var(--primary-color);
+		padding: 16px 0;
+
+		@media screen and (max-width: $media-lg) {
+			padding: 12px 0;
+		}
+	}
+
+	.col {
+		flex-basis: 20%;
+	}
+
+	.col1 {
+		padding-left: 25px;
+		flex-basis: 20%;
+
+		@media screen and (max-width: $media-lg) {
+			padding-left: 12px;
+
+		}
+	}
+
+	.col2 {
+		flex-basis: 35%;
+	}
+
+	.col3 {
+		flex-basis: 55%;
+		text-align: left;
+	}
+
+	.col5 {
+		padding-right: 25px;
+		display: flex;
+		justify-content: flex-end;
+		gap: 20px;
+		align-items: center;
+
+		@media screen and (max-width: $media-lg) {
+			padding-right: 12px;
+			gap: 10px;
+
+		}
+
+		@media screen and (max-width: $media-md) {
+			gap: 5px;
+		}
+
+		.iconWrapper {
+			cursor: pointer;
+
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+
+			@media screen and (max-width: $media-lg) {
+				svg {
+					height: 15px;
+					width: 15px;
+				}
+			}
+		}
+
+	}
+}
+
+
+.searchContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+}
+
+.searchInput {
+	position: relative;
+	width: 80%;
+	padding: 12px;
+	border-radius: 36px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--beige-color);
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+
+	@media screen and (max-width: 1400px) {
+		font-size: 17px;
+		line-height: 18px;
+	}
+
+	@media screen and (max-width: 778px) {
+		font-size: 12px;
+	}
+
+
+}
+
+.suggestionsWrapper {
+	position: absolute;
+	width: 80%;
+	top: 60%;
+	left: 0;
+	right: 0;
+	border: 2px solid var(--primary-color);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--beige-color);
+	border-top: none;
+	padding-top: 25px;
+
+
+}
+
+
+
+.suggestionItem {
+	padding: 8px;
+	cursor: pointer;
+	transition: all .4s ease;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 20px;
+
+	@media screen and (max-width: $media-lg) {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	&:hover {
+		color: #507178;
+	}
+}
+
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+
+
+.visibilityTheHigest {
+	z-index: 200;
+}

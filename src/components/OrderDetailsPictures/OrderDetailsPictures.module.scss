@@ -1,0 +1,139 @@
+@import '../../styles/media.scss';
+
+.iconsWrapper {
+	position: relative;
+	display: flex;
+	gap: 60px;
+	align-items: center;
+	justify-content: center;
+
+	@media only screen and (max-width: $media-lg) {
+		gap: 30px;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		flex-direction: column;
+		gap: 0;
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+
+		> :nth-child(odd) {
+			align-self: flex-start;
+		}
+
+		> :nth-child(even) {
+			align-self: flex-end;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 800px;
+		top: 40%;
+		border: 4px solid var(--gray-color);
+
+		@media only screen and (max-width: $media-xl) {
+			width: 600px;
+		}
+		@media only screen and (max-width: $media-lg) {
+			top: 30%;
+			width: 400px;
+			border: 2px solid var(--gray-color);
+		}
+
+		@media only screen and (max-width: $media-sm) {
+			display: none;
+		}
+	}
+}
+
+.elementWrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+
+	@media only screen and (max-width: $media-sm) {
+		&:not(:first-child) {
+			margin-top: -30px;
+		}
+	}
+}
+
+.iconWrapper {
+	width: 200px;
+	height: 200px;
+	padding: 20px;
+	border-radius: 100px;
+	background-color: var(--lightgreen-color);
+	border: 4px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+	&.active {
+		background-color: var(--secondary-background-color);
+	}
+
+	@media only screen and (max-width: $media-xl) {
+		width: 150px;
+		height: 150px;
+	}
+
+	@media only screen and (max-width: $media-lg) {
+		width: 100px;
+		height: 100px;
+		border: 2px solid var(--primary-color);
+	}
+}
+
+.iconWrapper.active .icon {
+	filter: none;
+	opacity: 1;
+}
+
+.icon {
+	filter: grayscale(100%);
+	opacity: 0.6;
+	transition:
+		filter 0.3s ease,
+		opacity 0.3s ease;
+}
+
+.label {
+	font-weight: 300;
+	font-size: 32px;
+
+	@media only screen and (max-width: $media-lg) {
+		font-size: 24px;
+	}
+}
+
+.lineWrapper {
+	display: none;
+
+	@media only screen and (max-width: $media-sm) {
+		display: block;
+		position: absolute;
+		top: 50px;
+
+		&.odd {
+			left: 103px;
+		}
+
+		&.even {
+			right: 100px;
+		}
+	}
+}
+
+.mirrored .line {
+	transform: scaleX(-1);
+}

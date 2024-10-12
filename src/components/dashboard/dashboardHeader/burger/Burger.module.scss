@@ -1,0 +1,76 @@
+@import "../../../../styles/media";
+@import "../../../../styles/mixins";
+
+.icons_mobile {
+	display: none;
+	@media only screen and (max-width: $media-xl) {
+		display: flex;
+		gap: 18px;
+		align-items: center;
+		width: calc((100% - 235px) / 2);
+		justify-content: flex-start;
+	}
+	@media only screen and (max-width: $media-sm) {
+		width: calc((100% - 100px) / 2);
+	}
+	@media only screen and (max-width: $media-xs) {
+		gap: 8px;
+	}
+}
+
+.opened {
+	@media only screen and (max-width: $media-md) {
+		width: fit-content;
+	}
+}
+
+.icons_item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	@include icons-state;
+
+	@media only screen and (max-width: $media-xl) {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+
+.burgerMenu {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	width: calc(100% + 0.4%);
+	background-color: var(--secondary-background-color);
+	border-top: 2px solid var(--primary-color);
+	border-left: 2px solid var(--primary-color);
+	border-right: 2px solid var(--primary-color);
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	transition: var(--transition), visibility 0.3s, opacity 0.3s;
+	visibility: hidden;
+	opacity: 0;
+	@media only screen and (max-width: $media-lg) {
+		border-left: none;
+		border-right: none;
+		width: 100%;
+		.nav {
+			display: block;
+			border-left: 2px solid var(--primary-color);
+
+		}
+	}
+}
+
+.burgerMenuOpen {
+	transform: translate(-50%, 0);
+	visibility: visible;
+	opacity: 1;
+}
+
+

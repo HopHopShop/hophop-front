@@ -1,0 +1,92 @@
+@import "src/styles/media.scss";
+
+.inputWrapper {
+	.button {
+		text-align: center;
+	}
+}
+
+.deliveryImages {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+	.deliveryImage {
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width: $media-xxl) {
+		margin-bottom: 15px;
+
+		.deliveryImage {
+			object-fit: contain;
+			width: 70px;
+			height: 40px;
+		}
+
+		@media only screen and (max-width: $media-sm) {
+			flex-wrap: wrap;
+
+			.deliveryImage {
+				object-fit: contain;
+				width: 53px;
+				height: 29px;
+			}
+		}
+	}
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.input {
+		width: 100%;
+		max-width: calc(50% - 10px);
+		margin-bottom: 30px;
+
+		@media only screen and (max-width: $media-xl) {
+			max-width: unset;
+		}
+	}
+
+	.input:nth-child(1),
+	.input:nth-child(3) {
+		margin-right: 20px;
+	}
+
+	@media only screen and (max-width: $media-xl) {
+		margin-bottom: 0;
+		flex-direction: column;
+	}
+
+}
+
+.button {
+	width: 100%;
+}
+
+.readyData {
+	display: flex;
+}
+
+.userInfo {
+	width: 100%;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 36px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.imgWrapper {
+	cursor: pointer;
+
+	.img {
+		width: 32px;
+		height: 32px;
+	}
+}

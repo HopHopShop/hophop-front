@@ -1,0 +1,30 @@
+@import "src/styles/media";
+
+.wrapper {
+	position: relative;
+	padding: 50px 60px;
+	height: 100%;
+	@media only screen and (max-width: $media-lg) {
+		padding: 20px 30px;
+
+	}
+}
+
+
+.form {
+	max-width: 500px;
+	width: 100%;
+
+	.couponWrapper {
+		display: flex;
+		width: 100%;
+		gap: 15px;
+
+		@media screen and (max-width: $media-lg) {
+			flex-direction: column;
+			margin-bottom: 25px;
+			gap: 25px;
+		}
+	}
+}
+

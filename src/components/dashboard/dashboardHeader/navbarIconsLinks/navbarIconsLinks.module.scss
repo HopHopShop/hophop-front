@@ -1,0 +1,56 @@
+@import "../../../../styles/media";
+@import "../../../../styles/mixins";
+
+.icons_list {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	justify-content: center;
+
+	@media only screen and (max-width: $media-xl) {
+		gap: 18px;
+	}
+	@media only screen and (max-width: $media-xs) {
+		gap: 8px;
+	}
+}
+
+
+.icons_item {
+	width: 22px;
+	height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	@include icons-state;
+	@media only screen and (max-width: $media-xl) {
+		width: 18px;
+		height: 18px;
+		&:nth-child(1) {
+			display: none;
+		}
+	}
+
+}
+
+
+.admin {
+	color: var(--yellow-color);
+	text-shadow: -2px -2px 0 var(--primary-color),
+	2px -2px 0 var(--primary-color),
+	-2px 2px 0 var(--primary-color),
+	2px 2px 0 var(--primary-color);
+
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 32px;
+	letter-spacing: 2px;
+
+	@media only screen and (max-width: $media-lg) {
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 26px;
+	}
+
+}

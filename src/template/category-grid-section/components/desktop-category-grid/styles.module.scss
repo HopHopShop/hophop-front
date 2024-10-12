@@ -1,0 +1,102 @@
+@import "src/styles/media.scss";
+
+.cardsRow {
+	display: flex;
+	column-gap: 20px;
+
+	@media only screen and (max-width: $media-xl) {
+		gap: 8px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+
+		@media only screen and (max-width: $media-xl) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&:nth-child(3n + 1) {
+		.card {
+			&:nth-child(1) {
+				max-width: calc(24% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(24% - 4px);
+				}
+			}
+
+			&:nth-child(2) {
+				max-width: calc(44% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(44% - 4px);
+				}
+			}
+
+			&:nth-child(3) {
+				max-width: calc(32% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(32% - 4px);
+				}
+			}
+		}
+	}
+
+	&:nth-child(3n + 2) {
+		.card {
+			&:nth-child(1) {
+				max-width: calc(32% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(32% - 4px);
+				}
+			}
+
+			&:nth-child(2) {
+				max-width: calc(24% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(24% - 4px);
+				}
+			}
+
+			&:nth-child(3) {
+				max-width: calc(44% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(44% - 4px);
+				}
+			}
+		}
+	}
+
+	&:nth-child(3n) {
+		.card {
+			&:nth-child(1) {
+				max-width: calc(44% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(44% - 4px);
+				}
+			}
+
+			&:nth-child(2) {
+				max-width: calc(32% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(32% - 4px);
+				}
+			}
+
+			&:nth-child(3) {
+				max-width: calc(24% - 14px);
+
+				@media only screen and (max-width: $media-xl) {
+					max-width: calc(24% - 4px);
+				}
+			}
+		}
+	}
+}

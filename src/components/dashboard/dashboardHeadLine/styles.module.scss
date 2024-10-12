@@ -1,0 +1,91 @@
+@import "../../../styles/media";
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	.mobileSearch {
+		display: none;
+
+		@media screen and (max-width: $media-md) {
+			display: block;
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+.compactContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	@media screen and (max-width: $media-md) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.compactSearch {
+		display: block !important;
+	}
+
+}
+
+.wrapper {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.plus {
+		display: none;
+		@media screen and (max-width: $media-md) {
+			display: flex;
+		}
+	}
+}
+
+.text {
+	font-size: 64px;
+	font-weight: 400;
+	line-height: 70px;
+	color: var(--primary-color);
+	@media screen and (max-width: $media-lg) {
+		font-size: 44px;
+		line-height: 40px;
+	}
+	@media screen and (max-width: $media-sm) {
+		font-size: 36px;
+		line-height: 38px;
+	}
+}
+
+.actions {
+	display: flex;
+	gap: 32px;
+
+	.button {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 38px;
+		padding: 12px 36px;
+	}
+
+	@media screen and (max-width: 1340px) {
+		.button {
+			font-size: 24px;
+			padding: 8px 24px;
+
+		}
+	}
+
+	@media screen and (max-width: $media-md) {
+		display: none;
+	}
+}
+

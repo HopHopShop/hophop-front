@@ -1,0 +1,22 @@
+@import "src/styles/media.scss";
+@import "src/styles/mixins.scss";
+
+.ribbonWrapper {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+
+.title {
+	@include section-heading;
+}
+
+.cards {
+	padding: 32px;
+	background: var(--gray-color);
+
+	@media only screen and (max-width: $media-lg) {
+		padding: 12px;
+	}
+}

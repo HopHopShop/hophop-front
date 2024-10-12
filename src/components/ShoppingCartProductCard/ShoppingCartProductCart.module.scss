@@ -1,0 +1,152 @@
+@import 'src/styles/mixins';
+
+.cardWrp {
+	display: flex;
+	gap: 20px;
+	border: 2.67px solid var(--primary-color);
+	border-radius: 27px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	padding: 16px;
+	background-color: var(--beige-color);
+
+	@media only screen and (max-width: $media-md) {
+		padding: 12px;
+	}
+	@media only screen and (max-width: $media-xs) {
+		gap: 14px;
+	}
+}
+
+.imgWrp {
+	border: 2.67px solid var(--primary-color);
+	border-radius: 16px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	min-width: 132px;
+	height: 132px;
+
+	@media only screen and (max-width: $media-sm) {
+		border: 2px solid var(--primary-color);
+		border-radius: 12px;
+		min-width: 99px;
+		height: 99px;
+	}
+}
+
+.product_image {
+	height: 100%;
+	border-radius: 12px;
+	object-fit: cover;
+
+}
+
+.detailsWrp {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+.linkWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.productName {
+	font-size: 24px;
+	line-height: 1.33;
+	transition: var(--transition);
+	word-break: break-word;
+	@media only screen and (max-width: $media-sm) {
+		font-size: 18px;
+	}
+
+	&:hover {
+		color: var(--gray-color);
+	}
+}
+
+.productDetails {
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 1.13;
+	@media only screen and (max-width: $media-md) {
+		font-size: 16px;
+	}
+}
+
+.details_upperPart {
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttonDelete {
+	width: 33px;
+	height: 33px;
+	align-items: center;
+	justify-content: center;
+	color: #FF7109;
+
+	@media only screen and (max-width: $media-xs) {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.details_lowerPart {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price {
+	font-size: 24px;
+	line-height: 1.33;
+	@media only screen and (max-width: $media-sm) {
+		font-size: 18px;
+	}
+}
+
+.quantity_controls {
+	border: 1px solid var(--primary-color);
+	border-radius: 83px;
+	box-shadow: 3px 3px 0 3px var(--primary-color);
+	background-color: var(--secondary-background-color);
+	padding: 5px 16px;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 1.13;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: space-between;
+	width: 117px;
+
+	@media only screen and (max-width: $media-sm) {
+		width: 100px;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+		border-radius: 62px;
+		padding: 4px 12px;
+		font-size: 16px;
+		gap: 5px;
+		width: 80px;
+		height: 26px;
+	}
+}
+
+.buttonIncrease {
+	width: 21px;
+	height: 21px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include icons-state;
+
+	@media only screen and (max-width: $media-sm) {
+		width: 18px;
+		height: 18px;
+	}
+}

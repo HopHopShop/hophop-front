@@ -1,0 +1,106 @@
+@import "../../../styles/media";
+
+.paginationContainer {
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	gap: 10px;
+	flex-wrap: wrap;
+	@media screen and (max-width: $media-lg) {
+		justify-content: center;
+	}
+}
+
+
+.paginationItem {
+	box-sizing: border-box;
+	width: 34px;
+	height: 34px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--beige-color);
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	border-radius: 50%;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 24px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		border-color: var(--gray-color);
+		box-shadow: 2px 2px 0 2px var(--gray-color);
+		color: var(--gray-color);
+		opacity: 0.9;
+
+	}
+
+
+	@media screen and (max-width: $media-lg) {
+		width: 24px;
+		height: 24px;
+		font-size: 13px;
+		line-height: 17px;
+		border: 1px solid var(--primary-color);
+		box-shadow: 1px 1px 0 1px var(--primary-color);
+		&:hover {
+			box-shadow: 1px 1px 0 1px var(--gray-color);
+		}
+	}
+
+}
+
+.dots:hover {
+	border-color: var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	opacity: 1;
+	cursor: default;
+	@media screen and (max-width: $media-lg) {
+		box-shadow: 1px 1px 0 1px var(--primary-color);
+	}
+}
+
+.selected {
+	color: var(--white-color);
+	background-color: var(--gray-color);
+
+	&:hover {
+		color: var(--white-color);
+		background-color: var(--gray-color);
+		opacity: 1;
+		border: 2px solid var(--primary-color);
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+		@media screen and (max-width: $media-lg) {
+			border: 1px solid var(--primary-color);
+			box-shadow: 1px 1px 0 1px var(--primary-color);
+		}
+	}
+}
+
+.disabled {
+	pointer-events: none;
+	user-select: none;
+	opacity: 0.6;
+}
+
+.arrow {
+	width: 20px;
+	height: 24px;
+	transition: all 0.3s ease-in-out;
+	@media screen and (max-width: $media-lg) {
+		width: 14px;
+		height: 18px;
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.arrowRight {
+	transform: rotate(180deg);
+}

@@ -1,0 +1,53 @@
+@import "src/styles/media.scss";
+@import "src/styles/mixins.scss";
+
+.section {
+	margin: 24px 0 80px 0;
+}
+
+.title {
+	@include section-heading;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 36px;
+	column-gap: 36px;
+
+	@media only screen and (max-width: $media-xxl) {
+		row-gap: 30px;
+		column-gap: 30px;
+	}
+
+	@media only screen and (max-width: $media-md) {
+		row-gap: 16px;
+		column-gap: 16px;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		row-gap: 8px;
+		column-gap: 8px;
+	}
+}
+
+.product {
+	width: 100%;
+	max-width: calc(33.333% - 24px);
+
+	@media only screen and (max-width: $media-xxl) {
+		max-width: calc(33.333% - 20px);
+	}
+
+	@media only screen and (max-width: $media-xl) {
+		max-width: calc(50% - 15px);
+	}
+
+	@media only screen and (max-width: $media-md) {
+		max-width: calc(50% - 8px);
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		max-width: calc(50% - 4px);
+	}
+}

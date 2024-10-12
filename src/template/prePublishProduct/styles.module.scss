@@ -1,0 +1,257 @@
+@import "src/styles/media.scss";
+@import "src/styles/mixins.scss";
+
+.publishContainer {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: 5000;
+	background: rgba(25, 44, 50, 0.9);
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	padding: 60px;
+
+	@media only screen and (max-width: 1100px) {
+		padding: 40px;
+		overflow-x: auto;
+	}
+
+	@media only screen and (max-width: $media-sm) {
+		padding: 30px;
+	}
+}
+
+.headWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		color: var(--beige-color);
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 46px;
+	}
+
+	button {
+		background-color: var(--beige-color);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+		border: 2px solid var(--primary-color);
+		box-shadow: 2px 2px 0 2px var(--primary-color);
+
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+.wrapper {
+	padding: 30px;
+	width: 100%;
+	height: 100%;
+	background: var(--beige-color);
+	border-radius: 24px;
+	border: 2px solid #192C32;
+	box-shadow: 4px 4px 0px 4px #192C32;
+
+}
+
+.productPage {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	width: 100%;
+	background: var(--lightblue-color);
+	border: 2px solid var(--primary-color);
+	padding: 60px 40px;
+
+	@media only screen and (max-width: 1100px) {
+		flex-direction: column;
+	}
+
+
+	@media only screen and (max-width: $media-xl) {
+		padding: 40px 20px;
+	}
+
+	@media only screen and (max-width: 1100px) {
+		padding: 20px;
+	}
+
+
+	&__description {
+		padding-top: 32px;
+		width: 100%;
+		max-width: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 1100px) {
+			max-width: unset;
+			justify-content: normal;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+
+			&__title {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+			}
+
+			&__wrapper {
+				width: 100%;
+				display: block;
+				margin-bottom: 32px;
+
+				@media only screen and (max-width: 1100px) {
+					display: flex;
+					margin-bottom: 0;
+				}
+			}
+
+			.title {
+				font-size: 40px;
+				font-weight: 300;
+				line-height: 46px;
+				margin-bottom: 10px;
+
+				@media only screen and (max-width: $media-xxl) {
+					font-size: 34px;
+				}
+
+				@media only screen and (max-width: 1100px) {
+					font-size: 28px;
+					line-height: 32px;
+					margin-bottom: 0;
+				}
+			}
+
+			.subTitle {
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 28px;
+				margin-bottom: 15px;
+
+				@media only screen and (max-width: $media-xxl) {
+					font-size: 20px;
+					line-height: 22px;
+				}
+
+				@media only screen and (max-width: 1100px) {
+					font-size: 16px;
+					line-height: 18px;
+					margin-bottom: 25px;
+				}
+			}
+
+			.price {
+				font-size: 36px;
+				font-weight: 400;
+				line-height: 38px;
+				margin-bottom: 25px;
+
+				@media only screen and (max-width: $media-xxl) {
+					font-size: 30px;
+					line-height: 32px;
+				}
+
+				@media only screen and (max-width: 1100px) {
+					font-size: 28px;
+					line-height: 16px;
+					margin-bottom: 0;
+					padding-top: 5px;
+				}
+			}
+
+			.desc {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 24px;
+
+				@media only screen and (max-width: $media-xxl) {
+					font-size: 16px;
+					line-height: 22px;
+				}
+
+				@media only screen and (max-width: 1100px) {
+					font-size: 16px;
+					line-height: 16px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+.defaultImageWrapper {
+	position: relative;
+	width: 100%;
+	margin-right: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 24px;
+	border: 4px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+}
+
+.mobileActions {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	top: 14px;
+	right: 18px;
+
+	@media only screen and (max-width: 1100px) {
+		display: block;
+	}
+}
+
+
+.hideDesktopSwiper {
+	@media only screen and (max-width: 1100px) {
+		display: none;
+	}
+}
+
+.showMobileSwiper {
+	@media only screen and (max-width: 1100px) {
+		display: block;
+	}
+}
+
+
+.hideLikeButton {
+	@media only screen and (max-width: 1100px) {
+		justify-content: center;
+
+
+		button {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}

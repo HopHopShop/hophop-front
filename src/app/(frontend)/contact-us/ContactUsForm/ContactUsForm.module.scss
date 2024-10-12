@@ -1,0 +1,50 @@
+@import '/src/styles/media.scss';
+
+.formContainer {
+    @media only screen and (max-width: $media-xl) {
+        width: 70%;
+    }
+
+    @media only screen and (max-width: $media-lg) {
+        width: 100%;
+    }
+}
+
+.inputContainer {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	width: 100%;
+
+	.input {
+		width: 100%;
+		max-width: calc(50% - 8px);
+
+		@media only screen and (max-width: $media-xl) {
+			max-width: unset;
+		}
+	}
+
+	&.withPhoneInput {
+		align-items: baseline;
+	}
+
+	@media only screen and (max-width: $media-xl) {
+		flex-direction: column;
+		gap: 0;
+	}
+}
+
+.sendMessageButton {
+	width: 100%;
+	font-size: 36px;
+	line-height: 1.06;
+
+    @media only screen and (max-width: $media-md) {
+        font-size: 20px;
+    }
+}
+
+.messageWrapper {
+ margin-bottom: 35px;
+}

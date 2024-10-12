@@ -1,0 +1,71 @@
+@import 'src/styles/media';
+
+.pageWrp {
+	padding: 62px 60px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	@media only screen and (max-width: $media-md) {
+		padding: 30px 20px;
+	}
+}
+
+.title {
+	font-size: 64px;
+	line-height: 1.09;
+	margin-bottom: 24px;
+}
+
+.buttonWrp {
+	margin: 0 auto;
+	display: flex;
+	gap: 25px;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--primary-color);
+	border-radius: 60px;
+	padding: 8px;
+	box-shadow: 4px 4px 0 0 var(--primary-color);
+	background: var(--secondary-background-color);
+	position: relative;
+	overflow: hidden;
+
+	@media only screen and (max-width: $media-md) {
+		gap: 15px;
+	}
+}
+
+.button {
+	padding: 8px 24px;
+	border-radius: 60px;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 1.15;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+	@media only screen and (max-width: $media-md) {
+		font-size: 28px;
+		padding: 4px 12px;
+	}
+}
+
+
+.active {
+	border: 2px solid var(--primary-color);
+	border-radius: 60px;
+	background-color: var(--gray-color);
+	color: var(--secondary-background-color);
+	box-shadow: 1px 1px 0 2px var(--black);
+}
+
+.buttonWrp::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 50%;
+	background-color: var(--primary-color);
+	left: 48%;
+	transform: translateX(-48%);
+	z-index: 0;
+}

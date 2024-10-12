@@ -1,0 +1,115 @@
+@import "src/styles/media.scss";
+
+.searchContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 3000;
+	height: 42px;
+}
+
+.searchInput {
+	position: relative;
+	width: 328px;
+	padding: 12px;
+	border-radius: 32px;
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--main-background-color);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: -0.02em;
+	z-index: 1000;
+
+	@media only screen and (max-width: $media-xxl) {
+		width: 220px;
+	}
+
+	@media only screen and (max-width: $media-lg) {
+		width: 200px;
+	}
+
+	@media only screen and (max-width: $media-xs) {
+		padding: 12px;
+		width: 180px;
+	}
+}
+
+.searchInputWithQuery {
+	padding-left: 32px;
+}
+
+
+.suggestionsWrapper {
+	position: absolute;
+	top: 60%;
+	left: 0;
+	right: 0;
+	border: 2px solid var(--primary-color);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: var(--main-background-color);
+	border-top: none;
+	z-index: 500;
+	padding-top: 25px;
+}
+
+.suggestionsWrapperScrollBar {
+	overflow: hidden;
+	position: relative;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.suggestionsContainer {
+	overflow-y: auto;
+	box-sizing: content-box;
+	max-height: 150px;
+}
+
+.suggestionItem {
+	padding: 8px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: -0.02em;
+	cursor: pointer;
+	transition: all .4s ease;
+
+
+	&:hover {
+		color: #507178;
+	}
+}
+
+
+.searchButton {
+	position: absolute;
+	left: 12px;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+}
+
+.closeButton {
+	position: absolute;
+	right: 12px;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+}
+.notFound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	font-weight: 700;
+}

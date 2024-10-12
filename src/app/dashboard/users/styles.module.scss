@@ -1,0 +1,14 @@
+@import "src/styles/media";
+
+.wrapper {
+	padding: 30px 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	min-height: 100vh;
+
+	@media screen and (max-width: $media-lg) {
+		padding: 20px 30px;
+		gap: 20px;
+	}
+}

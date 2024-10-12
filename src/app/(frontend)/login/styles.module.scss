@@ -1,0 +1,40 @@
+@import "src/styles/media";
+
+.container {
+	max-width: 480px;
+	width: 100%;
+	margin: 60px auto;
+	@media screen and (max-width: $media-sm) {
+		margin: 0;
+		max-width: 100%;
+		padding: 30px 20px;
+
+	}
+
+	.head {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 32px;
+
+		@media screen and (max-width: $media-sm) {
+			margin-bottom: 20px;
+			.logo {
+				width: 180px;
+				height: 100px;
+			}
+		}
+
+		.title {
+			margin-bottom: 20px;
+			font-size: 36px;
+			font-weight: 400;
+			line-height: 38px;
+		}
+	}
+}
+
+
+
+

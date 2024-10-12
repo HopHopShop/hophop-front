@@ -1,0 +1,100 @@
+@import '../../../styles/media.scss';
+
+.pageWrp {
+	padding: 60px;
+	margin: 0 auto;
+	display: flex;
+	gap: 28px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@media only screen and (max-width: $media-md) {
+		padding: 30px 20px;
+		gap: 20px;
+	}
+}
+
+.titleWrp {
+	display: flex;
+	align-items: center;
+	@media only screen and (max-width: $media-md) {
+		flex-direction: column;
+	}
+}
+
+.title {
+	font-size: 64px;
+	line-height: 1.09;
+	text-align: center;
+	margin-right: 10px;
+	@media only screen and (max-width: $media-md) {
+		max-width: 321px;
+		width: 100%;
+		font-size: 36px;
+		line-height: 1.06;
+		text-align: center;
+	}
+}
+
+.imgWrp {
+	@media only screen and (max-width: $media-md) {
+		width: 166px;
+		height: 300px;
+	}
+}
+
+.subtitle {
+	max-width: 500px;
+	width: 100%;
+	text-align: center;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 1.15;
+
+	@media only screen and (max-width: $media-md) {
+		font-weight: 250;
+		font-size: 20px;
+		line-height: 1.1;
+	}
+}
+
+.descriptionWrp {
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.2;
+
+	@media only screen and (max-width: $media-md) {
+		font-size: 16px;
+		line-height: 1.25;
+		max-width: 260px;
+		width: 100%;
+	}
+}
+
+.pLinkToOrders {
+	@media only screen and (max-width: $media-md) {
+		margin-top: 10px;
+	}
+}
+
+.linkToOrders {
+	font-weight: 700;
+	text-decoration: underline;
+	margin-left: 5px;
+
+	@media only screen and (max-width: $media-md) {
+	}
+}
+
+.button {
+	padding: 12px 36px;
+	font-size: 36px;
+	line-height: 1.06;
+
+	@media only screen and (max-width: $media-md) {
+		font-size: 20px;
+		line-height: 1.1;
+		padding: 12px 24px;
+	}
+}

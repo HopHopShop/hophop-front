@@ -1,0 +1,97 @@
+@import "src/styles/media.scss";
+
+.cardsColWrapper {
+	display: flex;
+	column-gap: 8px;
+}
+
+.cardsCol {
+	width: 100%;
+	max-width: calc(50% - 4px);
+
+	&:nth-child(odd) {
+		.card {
+			&:nth-child(3n + 1) {
+				height: 400px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 300px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 200px;
+				}
+			}
+
+			&:nth-child(3n + 2) {
+				height: 324px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 243px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 162px;
+				}
+			}
+
+			&:nth-child(3n) {
+				height: 240px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 180px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 120px;
+				}
+			}
+		}
+	}
+
+	&:nth-child(even) {
+		.card {
+			&:nth-child(3n + 1) {
+				height: 240px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 180px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 120px;
+				}
+			}
+
+			&:nth-child(3n + 2) {
+				height: 324px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 243px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 162px;
+				}
+			}
+
+			&:nth-child(3n) {
+				height: 400px;
+
+				@media only screen and (max-width: $media-md) {
+					height: 300px;
+				}
+
+				@media only screen and (max-width: $media-xs) {
+					height: 200px;
+				}
+			}
+		}
+	}
+}
+
+.card {
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+}

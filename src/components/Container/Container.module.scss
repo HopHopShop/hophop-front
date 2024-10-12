@@ -1,0 +1,25 @@
+@import "src/styles/media.scss";
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	position: relative;
+	width: 100%;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 40px;
+	padding-right: 40px;
+
+
+	@media only screen and (max-width: $media-md) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@media only screen and (max-width: $media-xs) {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}

@@ -1,0 +1,11 @@
+@import 'src/styles/media';
+
+.wrapper {
+	padding: 62px 60px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	@media only screen and (max-width: $media-md) {
+		padding: 30px 20px;
+	}
+}

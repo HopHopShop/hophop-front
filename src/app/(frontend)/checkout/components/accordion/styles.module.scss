@@ -1,0 +1,64 @@
+@import "src/styles/media.scss";
+
+.container {
+	border: 2px solid var(--primary-color);
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	border-radius: 32px;
+	margin-bottom: 52px;
+	@media only screen and (max-width: $media-lg) {
+		margin-bottom: 32px;
+	}
+}
+
+.head {
+	padding: 12px 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 32px;
+	background-color: #DDE8E4;
+	transition: background-color 0.4s ease-in-out;
+	cursor: pointer;
+
+
+	&:hover {
+		background-color: #7A8E98;
+	}
+
+	.title {
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 32px;
+		@media only screen and (max-width: $media-lg) {
+		}
+	}
+
+	.img {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.body {
+	padding: 24px;
+	@media only screen and (max-width: $media-lg) {
+		padding: 16px;
+	}
+}
+
+.active {
+	box-shadow: none;
+}
+
+.activeHead {
+	border: 2px solid var(--primary-color);
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	box-shadow: 2px 2px 0 2px var(--primary-color);
+	background-color: #B5C2C8;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
