@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
@@ -15,6 +16,7 @@ const nextConfig = {
 				pathname: '/**',
 			},
 		],
+		domains: ['res.cloudinary.com', 'images.unsplash.com'],
 	},
 	webpack: (config) => {
 		config.module.rules.push({
@@ -22,7 +24,7 @@ const nextConfig = {
 			use: ['@svgr/webpack'],
 		});
 		return config;
-	}
+	},
 };
 
 export default nextConfig;
